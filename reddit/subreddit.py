@@ -40,10 +40,7 @@ def get_subreddit_threads(POST_ID: str):
             passkey=passkey,
             check_for_async=False,
         )
-    except ResponseException as e:
-        match e.response.status_code:
-            case 401:
-                print("Invalid credentials - please check them in config.toml")
+
     except:
         print("Something went wrong...")
 
